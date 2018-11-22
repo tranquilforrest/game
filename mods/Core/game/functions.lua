@@ -89,3 +89,12 @@ function game.set_player_priv(playername, privelege, value)
 
 	minetest.set_player_privs(playername, privs)
 end
+
+
+function game.get_hotbar_bg(x,y)
+	local out = ""
+	for i=0,7,1 do
+		out = out .."image["..x+i..","..y..";1,1;gui_hotbar_bg_"..i..".png]"
+	end
+	return out
+end

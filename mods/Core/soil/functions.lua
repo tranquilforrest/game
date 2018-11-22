@@ -53,8 +53,8 @@ local function is_edge(pos)
 	if not check_reg(minetest.registered_nodes, l1) or not check_reg(minetest.registered_nodes, r1) or not check_reg(minetest.registered_nodes, l2) or not check_reg(minetest.registered_nodes, r2) then return end
 	if l1 == "air" or not minetest.registered_nodes[l1] or
 	l2 == "air" or not minetest.registered_nodes[l2].walkable or
-	l3 == "air" or not minetest.registered_nodes[r1].walkable or
-	l4 == "air" or not minetest.registered_nodes[r2].walkable then
+	not minetest.registered_nodes[r1].walkable or
+	not minetest.registered_nodes[r2].walkable then
 		return true
 	end
 
