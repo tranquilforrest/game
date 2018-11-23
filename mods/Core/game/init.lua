@@ -29,6 +29,12 @@ dofile(game.path.."/functions.lua")
 dofile(game.path.."/mapgen.lua")
 dofile(game.path.."/register.lua")
 
+minetest.register_on_joinplayer(function(player)
+	player:hud_set_flags({
+		minimap = true,
+		--minimap_radar = radar_enabled
+	})
+end)
 
 
 

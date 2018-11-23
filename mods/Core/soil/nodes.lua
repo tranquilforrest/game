@@ -124,6 +124,19 @@ minetest.register_node("soil:grass", {
 			}),
 		})
 
+minetest.register_node("soil:grass_dry", {
+	description = "Dirt with dry grass",
+	tiles = {
+		"soil_grass_dry_top.png",
+		{name = "soil_dirt_side.png^soil_grass_dry_side.png", tileable_vertical = false}
+	},
+	groups = {crumbly=3, soil=1, dirt=1, grass=1},
+	drop = 'soil:grass_dry',
+	sounds = sound.dirt({
+		footstep = {name="soil_grass_footstep", gain=0.4},
+	}),
+})
+
 minetest.register_node("soil:snow", {
 	description = "Dirt with Snow",
 	tiles = {

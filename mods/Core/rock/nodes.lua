@@ -22,7 +22,7 @@ minetest.register_node("rock:stone", {
 			"rock_stone_top.png",
 			{name = "rock_stone_side.png", tileable_vertical = false}
 		},
-		groups = {cracky=3, not_in_creative_inventory=1},
+		groups = {cracky=3, not_in_creative_inventory=1, rock=1, stone=1, rockstone=1},
 		drop = 'rock:cobble',
 		legacy_mineral = true,
 		sounds = sound.stone(),
@@ -34,7 +34,7 @@ minetest.register_node("rock:stone", {
 			"rock_stone_top_2.png",
 			{name = "rock_stone_side_2.png", tileable_vertical = false}
 		},
-		groups = {cracky=3, not_in_creative_inventory=1},
+		groups = {cracky=3, not_in_creative_inventory=1, rock=1, stone=1, rockstone=1},
 		drop = 'rock:cobble',
 		legacy_mineral = true,
 		sounds = sound.stone(),
@@ -46,7 +46,7 @@ minetest.register_node("rock:stone", {
 			"rock_stone_top_3.png",
 			{name = "rock_stone_side_3.png", tileable_vertical = false}
 		},
-		groups = {cracky=3, not_in_creative_inventory=1},
+		groups = {cracky=3, not_in_creative_inventory=1, rock=1, stone=1, rockstone=1},
 		drop = 'rock:cobble',
 		legacy_mineral = true,
 		sounds = sound.stone(),
@@ -58,19 +58,12 @@ minetest.register_node("rock:stone", {
 			"rock_stone_top_4.png",
 			{name = "rock_stone_side_4.png", tileable_vertical = false}
 		},
-		groups = {cracky=3, not_in_creative_inventory=1},
+		groups = {cracky=3, not_in_creative_inventory=1, rock=1, stone=1, rockstone=1},
 		drop = 'rock:cobble',
 		legacy_mineral = true,
 		sounds = sound.stone(),
 	})
 
-minetest.register_node("rock:sandstone", {
-	description = "Sandstone",
-	tiles ={"default_sandstone.png"},
-	groups = {crumbly=2,cracky=2, rock=1, stone=1},
-	drop = 'soil:sand',
-	sounds = sound.stone(),
-})
 
 minetest.register_node("rock:brick", {
 	description = "Brick",
@@ -114,4 +107,12 @@ minetest.register_node("rock:gravel", {
 	sounds = sound.dirt({
 		footstep = {name="default_gravel_footstep", gain=0.45},
 	}),
+})
+
+minetest.register_node("rock:desert", {
+	description = "Desert Sandstone",
+	tiles ={"rock_desert.png"},
+	groups = {crumbly=2,cracky=2, rock=1, stone=1},
+	drop = 'rock:desert',
+	sounds = sound.stone(),
 })
