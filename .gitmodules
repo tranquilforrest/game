@@ -1,12 +1,15 @@
 [submodule "mods/Library/crafting"]
 	path = mods/Library/crafting
-	url = https://github.com/rubenwardy/crafting.git
+	url = git@github.com:derixithy/simplelife-crafting.git
 [submodule "mods/Library/toolranks"]
 	path = mods/Library/toolranks
 	url = git@github.com:derixithy/simplelife-toolranks.git
 [submodule "mods/Library/quests"]
 	path = mods/Library/quests
-	url = https://github.com/TeTpaAka/quests.git
+	url = git@github.com:derixithy/simplelife-quests.git
 [submodule "mods/Library/teruview"]
 	path = mods/Library/teruview
 	url = https://github.com/Terumoc/teruview.git
+[submodule "mods/Library/sfinv"]
+	path = mods/Library/sfinv
+	url = https://github.com/rubenwardy/sfinv.git
