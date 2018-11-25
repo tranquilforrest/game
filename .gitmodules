@@ -1,6 +1,6 @@
 [submodule "mods/Library/crafting"]
 	path = mods/Library/crafting
-	url = git@github.com:derixithy/simplelife-crafting.git
+	url = https://github.com/rubenwardy/crafting.git
 [submodule "mods/Library/toolranks"]
 	path = mods/Library/toolranks
 	url = git@github.com:derixithy/simplelife-toolranks.git

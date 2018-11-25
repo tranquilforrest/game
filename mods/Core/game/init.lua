@@ -29,37 +29,16 @@ dofile(game.path.."/functions.lua")
 dofile(game.path.."/mapgen.lua")
 dofile(game.path.."/register.lua")
 
-minetest.register_on_joinplayer(function(player)
-	player:hud_set_flags({
-		minimap = true,
-		--minimap_radar = radar_enabled
-	})
-end)
 
+
+-- Work around: remove default workbench
+minetest.unregister_item('crafting:work_bench')
 
 
 --[[
+
 minetest.register_on_newplayer(function(player)
-player:get_inventory():add_item("main", "playerxp:book")
+	player:get_inventory():add_item("main", "rock:stone")
 end)
 
-
--- Global environment step function
-function on_step(dtime)
-	-- print("on_step")
-end
-minetest.register_globalstep(on_step)
-
-function on_placenode(p, node)
-	--print("on_placenode")
-end
-minetest.register_on_placenode(on_placenode)
-
-function on_dignode(p, node)
-	--print("on_dignode")
-end
-minetest.register_on_dignode(on_dignode)
-
-function on_punchnode(p, node)
-end
-minetest.register_on_punchnode(on_punchnode)]]--
+]]--
