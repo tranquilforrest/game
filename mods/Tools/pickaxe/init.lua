@@ -1,7 +1,8 @@
 
-minetest.register_tool("pick:wood", {
+minetest.register_tool("pickaxe:wood", {
 	original_description = "Wooden Pickaxe",
 	description = toolranks.create_description("Wooden Pickaxe", 0, 1),
+	original_description = "Wooden Pickaxe",
 	inventory_image = "default_tool_woodpick.png",
 	tool_capabilities = {
 		max_drop_level=0,
@@ -13,9 +14,10 @@ minetest.register_tool("pick:wood", {
 	after_use = toolranks.new_afteruse
 })
 
-minetest.register_tool("pick:stone", {
+minetest.register_tool("pickaxe:stone", {
 	original_description = "Stone Pickaxe",
 	description = toolranks.create_description("Stone Pickaxe", 0, 1),
+	original_description = "Stone Pickaxe",
 	inventory_image = "default_tool_stonepick.png",
 	tool_capabilities = {
 		max_drop_level=0,
@@ -27,9 +29,10 @@ minetest.register_tool("pick:stone", {
 	after_use = toolranks.new_afteruse
 })
 
-minetest.register_tool("pick:steel", {
+minetest.register_tool("pickaxe:steel", {
 	original_description = "Steel Pickaxe",
 	description = toolranks.create_description("Steel Pickaxe", 0, 1),
+	original_description = "Steel Pickaxe",
 	inventory_image = "default_tool_steelpick.png",
 	tool_capabilities = {
 		max_drop_level=1,

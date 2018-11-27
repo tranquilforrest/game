@@ -1,6 +1,7 @@
 minetest.register_tool("axe:wood", {
 	description = toolranks.create_description("Wooden Axe", 0, 1),
-	inventory_image = "default_tool_woodaxe.png",
+	original_description = "Wooden Axe",
+	inventory_image = "axe_wood.png",
 	tool_capabilities = {
 		max_drop_level=0,
 		groupcaps={
@@ -14,7 +15,8 @@ minetest.register_tool("axe:wood", {
 
 minetest.register_tool("axe:stone", {
 	description = toolranks.create_description("Stone Axe", 0, 1),
-	inventory_image = "default_tool_stoneaxe.png",
+	original_description = "Stone Axe",
+	inventory_image = "axe_stone.png",
 	tool_capabilities = {
 		max_drop_level=0,
 		groupcaps={
@@ -28,6 +30,7 @@ minetest.register_tool("axe:stone", {
 
 minetest.register_tool("axe:steel", {
 	description = toolranks.create_description("Steel Axe", 0, 1),
+	original_description = "Steel Axe",
 	inventory_image = "default_tool_steelaxe.png",
 	tool_capabilities = {
 		max_drop_level=1,
