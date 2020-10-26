@@ -57,7 +57,7 @@ minetest.register_on_generated(function(minp, maxp, seed)
 		local id = data[vi]
 		if id == grass then
 			--grass_id = math.random(1,4)
-			data[vi] = grass_type[math.random(#grass_type)]
+			data[vi] = grass_type[math.random(1,4)]
 		end
 	end
 
