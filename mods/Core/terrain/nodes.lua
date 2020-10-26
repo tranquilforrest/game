@@ -32,9 +32,35 @@ minetest.register_alias("mapgen_pine_needles", "default:pine_needles")		-- todo
 -- Dungeons
 
 minetest.register_alias("mapgen_cobble", "rock:cobble")
-minetest.register_alias("mapgen_stair_cobble", "stairs:stair_cobble")		-- todo
+minetest.register_alias("mapgen_stair_cobble", "stairs:cobble")		-- todo
 minetest.register_alias("mapgen_mossycobble", "rock:mossycobble")
-minetest.register_alias("mapgen_stair_desert_stone", "stairs:stair_desert_stone")	-- todo
+minetest.register_alias("mapgen_stair_desert_stone", "stairs:desert_stone")	-- todo
 minetest.register_alias("mapgen_sandstonebrick", "default:sandstonebrick")			-- todo
-minetest.register_alias("mapgen_stair_sandstone_block", "stairs:stair_sandstone_block") -- todo
+minetest.register_alias("mapgen_stair_sandstone_block", "stairs:sandstone_block") -- todo
 
+
+
+
+local grass = minetest.get_content_id("soil:grass")
+local grass_type = {
+	minetest.get_content_id("soil:grass_1"),
+	minetest.get_content_id("soil:grass_2"),
+	minetest.get_content_id("soil:grass_3"),
+	minetest.get_content_id("soil:grass_4")
+}
+minetest.register_on_generated(function(minp, maxp, seed)
+	local vm, emin, emax = minetest.get_mapgen_object("voxelmanip")
+	local data = vm:get_data()
+	local area = VoxelArea:new{MinEdge = emin, MaxEdge = emax}
+
+	for vi in area:iterp(minp, maxp) do
+		local id = data[vi]
+		if id == grass then
+			--grass_id = math.random(1,4)
+			data[vi] = grass_type[math.random(#grass_type)]
+		end
+	end
+
+	vm:set_data(data)
+	vm:write_to_map()
+end)

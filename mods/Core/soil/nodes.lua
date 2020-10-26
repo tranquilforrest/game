@@ -27,59 +27,12 @@ minetest.register_node("soil:grass", {
 		return ItemStack("soil:grass".. " "..itemstack:get_count()-(1-ret:get_count()))
 	end,
 })
-	minetest.register_node("soil:grass_1", {
-		description = "Dirt with grass 1",
-		tiles ={
-			"soil_grass_top.png", "soil_dirt_top.png",
-			{name = "soil_dirt_side.png^soil_grass_side.png", tileable_vertical = false}
-		},
-		groups = {crumbly=3, soil=1, dirt=1, grass=1, not_in_creative_inventory=1},
-		drop = 'soil:grass',
-		sounds = sound.dirt({
-			footstep = {name="soil_grass_footstep", gain=0.4},
-		}),
-	})
-	minetest.register_node("soil:grass_2", {
-		description = "Dirt with grass 2",
-		tiles ={
-			"soil_grass_top_2.png", "soil_dirt_top.png",
-			{name = "soil_dirt_side.png^soil_grass_side.png", tileable_vertical = false}
-		},
-		groups = {crumbly=3, soil=1, dirt=1, grass=1, not_in_creative_inventory=1},
-		drop = 'soil:grass',
-		sounds = sound.dirt({
-			footstep = {name="soil_grass_footstep", gain=0.4},
-		}),
-	})
-	minetest.register_node("soil:grass_3", {
-		description = "Dirt with grass 3",
-		tiles ={
-			"soil_grass_top_3.png", "soil_dirt_top.png",
-			{name = "soil_dirt_side.png^soil_grass_side.png", tileable_vertical = false}
-		},
-		groups = {crumbly=3, soil=1, dirt=1, grass=1, not_in_creative_inventory=1},
-		drop = 'soil:grass',
-		sounds = sound.dirt({
-			footstep = {name="soil_grass_footstep", gain=0.4},
-		}),
-	})
-	minetest.register_node("soil:grass_4", {
-		description = "Dirt with grass 4",
-		tiles ={
-			"soil_grass_top_4.png", "soil_dirt_top.png",
-			{name = "soil_dirt_side.png^soil_grass_side.png", tileable_vertical = false}
-		},
-		groups = {crumbly=3, soil=1, dirt=1, grass=1, not_in_creative_inventory=1},
-		drop = 'soil:grass',
-		sounds = sound.dirt({
-			footstep = {name="soil_grass_footstep", gain=0.4},
-		}),
-	})
-		minetest.register_node("soil:grass_full_1", {
-			description = "Dirt with grass 1",
+	for i = 1, 4 do
+		minetest.register_node("soil:grass_"..i, {
+			description = "Dirt with grass "..i,
 			tiles ={
-				"soil_grass_top.png", "soil_dirt_top.png",
-				{name = "soil_grass_side_full.png", tileable_vertical = false}
+				"soil_grass_top_"..i..".png", "soil_dirt_top.png",
+				{name = "soil_dirt_side.png^soil_grass_side.png", tileable_vertical = false}
 			},
 			groups = {crumbly=3, soil=1, dirt=1, grass=1, not_in_creative_inventory=1},
 			drop = 'soil:grass',
@@ -87,10 +40,12 @@ minetest.register_node("soil:grass", {
 				footstep = {name="soil_grass_footstep", gain=0.4},
 			}),
 		})
-		minetest.register_node("soil:grass_full_2", {
-			description = "Dirt with grass 2",
+	end
+	for i = 1, 4 do
+		minetest.register_node("soil:grass_full_"..i, {
+			description = "Dirt with grass "..i,
 			tiles ={
-				"soil_grass_top_2.png", "soil_dirt_top.png",
+				"soil_grass_top_"..i..".png", "soil_dirt_top.png",
 				{name = "soil_grass_side_full.png", tileable_vertical = false}
 			},
 			groups = {crumbly=3, soil=1, dirt=1, grass=1, not_in_creative_inventory=1},
@@ -98,31 +53,8 @@ minetest.register_node("soil:grass", {
 			sounds = sound.dirt({
 				footstep = {name="soil_grass_footstep", gain=0.4},
 			}),
-		})
-		minetest.register_node("soil:grass_full_3", {
-			description = "Dirt with grass 3",
-			tiles ={
-				"soil_grass_top_3.png", "soil_dirt_top.png",
-				{name = "soil_grass_side_full.png", tileable_vertical = false}
-			},
-			groups = {crumbly=3, soil=1, dirt=1, grass=1, not_in_creative_inventory=1},
-			drop = 'soil:grass',
-			sounds = sound.dirt({
-				footstep = {name="soil_grass_footstep", gain=0.4},
-			}),
-		})
-		minetest.register_node("soil:grass_full_4", {
-			description = "Dirt with grass 4",
-			tiles ={
-				"soil_grass_top_4.png", "soil_dirt_top.png",
-				{name = "soil_grass_side_full.png", tileable_vertical = false}
-			},
-			groups = {crumbly=3, soil=1, dirt=1, grass=1, not_in_creative_inventory=1},
-			drop = 'soil:grass',
-			sounds = sound.dirt({
-				footstep = {name="soil_grass_footstep", gain=0.4},
-			}),
-		})
+		})	
+	end
 
 minetest.register_node("soil:grass_dry", {
 	description = "Dirt with dry grass",

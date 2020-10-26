@@ -58,7 +58,7 @@ function terrain.register_decorations_mgv6()
 		minetest.register_decoration({
 			name = "default:grass_"..length,
 			deco_type = "simple",
-			place_on = {"default:dirt_with_grass"},
+			place_on = {"soil:grass", "soil:grass_1", "soil:grass_2", "soil:grass_3", "soil:grass_4"},
 			sidelen = 16,
 			noise_params = {
 				offset = 0,
